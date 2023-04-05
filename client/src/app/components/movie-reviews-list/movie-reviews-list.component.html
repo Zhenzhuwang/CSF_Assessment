@@ -1,0 +1,36 @@
+<mat-nav-list>
+    <h1>Search Result</h1><span><button mat-raised-button type="button" (click)="back()">Back</button> </span>
+    <div>
+        <a mat-list-item *ngFor="let m of movies" [routerLink]="['comment']">
+            {{m.display_title}}{{m.mpaa_rating}}
+            {{m.headline}}
+            {{m.summary_short}}
+        </a>
+        <button type="submit" (click)="comment()">Comment</button>
+    </div>
+</mat-nav-list>
+
+ <!-- <div>
+    <button mat-raised-button type="button" (click)="back()">Back</button>
+    &nbsp; -->
+    <!-- <button mat-raised-button type="button" (click)="next()">Next</button> -->
+<!-- </div> -->
+
+<!-- <mat-card *ngIf="movies" class="example-card">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>{{movies.title}}</mat-card-title>
+        <mat-card-subtitle><button mat-raised-button type="button" (click)="comment()">Comment</button></mat-card-subtitle>
+        <img mat-card-xl-image src="{{movieName.photo}}" >
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+        {{movies.short_summary}}
+    </mat-card-content>
+  </mat-card>
+
+  <mat-nav-list>
+    <a mat-list-item *ngFor="let c of comment">
+        {{c?.comment}}
+    </a>
+</mat-nav-list> -->
